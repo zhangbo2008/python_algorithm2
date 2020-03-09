@@ -1,5 +1,5 @@
 """
-    Fisher-Yates/Knuth
+    Fisher-Yates/Knuth   # 就是shuffle数组的算法.
     ------------------
     Randomly picks integers to swap elements in an ubiased manner.
 

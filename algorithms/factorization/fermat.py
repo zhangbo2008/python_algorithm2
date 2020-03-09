@@ -31,3 +31,4 @@ def fermat(n):
         else:
             x += 1
     return [x-y, x+y]
+print(fermat(5))

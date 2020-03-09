@@ -4,7 +4,7 @@ import unittest
 from algorithms.data_structures import (
     binary_search_tree,
     digraph,
-    queue,
+    queue1,
     singly_linked_list,
     stack,
     undirected_graph,
@@ -470,7 +470,7 @@ class TestQueue(unittest.TestCase):
     Test Queue Implementation
     """
     def test_queue(self):
-        self.que = queue.Queue()
+        self.que = queue1.Queue()
         self.que.add(1)
         self.que.add(2)
         self.que.add(8)

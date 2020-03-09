@@ -32,17 +32,18 @@ def search(text, pattern):
     bmbc = [pattern_length] * 256
     for index, char in enumerate(pattern[:-1]):
         bmbc[ord(char)] = pattern_length - index - 1
-    bmbc = tuple(bmbc)
+    bmbc = tuple(bmbc)  # bmbc 来记录pattern. 写入一个ascii表中.
     search_index = pattern_length - 1
     while search_index < text_length:
         pattern_index = pattern_length - 1
         text_index = search_index
         while text_index >= 0 and \
-                text[text_index] == pattern[pattern_index]:
+                text[text_index] == pattern[pattern_index]:  # 这个行是从后往前匹配的.所以下面都是-=1
             pattern_index -= 1
             text_index -= 1
-        if pattern_index == -1:
+        if pattern_index == -1: # 匹配成功了.
             offsets.append(text_index + 1)
-        search_index += bmbc[ord(text[search_index])]
+        search_index += bmbc[ord(text[search_index])] # 这行是核心,匹配失败就跳.直接跳一个字符串长度即可.
 
     return offsets
+print(search("abcd","bcd"))

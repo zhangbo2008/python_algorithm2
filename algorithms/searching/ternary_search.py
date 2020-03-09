@@ -1,5 +1,5 @@
 """
-    Ternary search
+    Ternary search  # 三叉搜索树. 没啥意思的算法.
     ---------------
     Finds the maximum of unimodal function fn() within [left, right]
     To find the minimum, revert the if/else statement or revert the comparison.
