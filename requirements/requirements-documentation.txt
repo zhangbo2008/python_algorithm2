@@ -1,6 +1,6 @@
 alabaster==0.7.6
 argh==0.26.1
-Babel==2.1.1
+Babel==2.9.1
 docutils==0.12
 Jinja2==2.8
 livereload==2.4.0
